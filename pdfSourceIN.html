@@ -1,0 +1,405 @@
+<html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-kotlin.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1897185137">浅谈Kotlin中的协程</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1897185137">浅谈Kotlin中的协程</h1><section><h2 id="-1897185137#i34t66q_125" data-toc="i34t66q_125#starter.md-i34t66q_125">引言</h2><p id="-1897185137#i34t66q_126">在现代软件开发中，并发编程和异步任务处理变得越来越重要。无论是处理大量的网络请求、管理后台任务，还是实现实时响应的用户界面，开发者都需要一种高效且简洁的方式来处理这些挑战。在传统的编程语言中，实现并发和异步操作通常需要使用复杂的线程模型和回调机制，它们臃肿，增加了无谓的复杂度，难以维护。</p><p id="-1897185137#i34t66q_127">Kotlin作为一种现代编程语言，为开发者提供了一种强大，优雅的解决方案&mdash;&mdash;协程。协程是一种轻量级的线程，能够以简洁的代码实现复杂的并发和异步操作。与传统线程相比，协程具有更低的开销和更高的性能，能够显著提升程序的响应速度和资源利用效率。</p><p id="-1897185137#i34t66q_128">我们将逐步深入探讨Kotlin协程的各个方面，从基础概念到高级用法。</p><p id="-1897185137#i34t66q_129">由于Kotlin协程本身属于无栈协程，本文更多介绍无栈协程。</p></section><section><h2 id="-1897185137#i34t66q_130" data-toc="i34t66q_130#starter.md-i34t66q_130">基本概念</h2><p id="-1897185137#i34t66q_131">协程是一种用于并发编程的轻量级工具，可以被挂起/恢复。它具有以下特点：</p><ul class="list" id="-1897185137#i34t66q_132" start="1"><li class="list-item" id="-1897185137#i34t66q_133"><p>轻量级：协程并不需要负责新建线程/进程资源，因此相较于传统的线程更为轻量</p></li><li class="list-item" id="-1897185137#i34t66q_134"><p>可挂起/恢复：协程可以在执行IO等耗时操作时挂起，避免阻塞</p></li><li class="list-item" id="-1897185137#i34t66q_135"><p>结构化并发： 协程的生命周期可以被显式控制，方便管理</p></li><li class="list-item" id="-1897185137#i34t66q_136"><p>允许顺序编程：协程在实际应用时就像普通的同步代码一样，有助于提高可读性</p></li></ul></section><section><h2 id="-1897185137#kotlin" data-toc="kotlin#starter.md-kotlin">Kotlin协程</h2><section><h3 id="-1897185137#suspend" data-toc="suspend#starter.md-suspend">suspend 函数</h3><p id="-1897185137#i34t66q_137">在Kotlin中，定义一个suspend函数非常容易：</p><div class="detached code-block" id="-1897185137#i34t66q_138"><pre><code class="language-kotlin">suspend fun runWithCoroutines(): String {
+    delay(1000)
+    return &quot;data&quot;
+}
+val value = runWithCoroutines()</code></pre></div><p id="-1897185137#i34t66q_139">它会模拟一个耗时一秒的操作之后返回数据，同时不会阻塞主线程，无需使用回调。</p></section></section><section><h2 id="-1897185137#i34t66q_140" data-toc="i34t66q_140#starter.md-i34t66q_140">协程构建器</h2><p id="-1897185137#i34t66q_141">Kotlin提供了一些协程构建器来启动协程。最常用的构建器有<span class="inline-code" id="-1897185137#i34t66q_142">launch</span> <span class="inline-code" id="-1897185137#i34t66q_143">async</span> <span class="inline-code" id="-1897185137#i34t66q_144">runBlocking</span></p><section><h3 id="-1897185137#launch" data-toc="launch#starter.md-launch">launch:</h3><p id="-1897185137#i34t66q_145">launch构建器用于启动一个新协程，它类似于传统的新建线程，适用于不需要返回结果的后台任务。</p><div class="detached code-block" id="-1897185137#i34t66q_146"><pre><code class="language-kotlin">GlobalScope.launch{
+    val data = runWithCoroutines()
+    println(data)
+}</code></pre></div><p id="-1897185137#i34t66q_147">这段代码启动了一个新的协程，在GlobalScope(全局作用域)中运行<span class="inline-code" id="-1897185137#i34t66q_148">runWithCoroutines()</span>函数，并且在获取到结果之后打印出来。</p></section><section><h3 id="-1897185137#async" data-toc="async#starter.md-async">async:</h3><p id="-1897185137#i34t66q_149">async会返回一个<span class="inline-code" id="-1897185137#i34t66q_150">Deferred</span>对象，类似于JavaScript中的Promise和Java中的Future，通过await这个对象来获取结果，类似于：</p><div class="detached code-block" id="-1897185137#i34t66q_151"><pre><code class="language-kotlin">val deferred:Deferred&lt;String&gt; = GlobalScope.async {
+    runWithCoroutines()
+}
+runBlocking {
+    val data = deferred.await()
+    println(data)
+}</code></pre></div><p id="-1897185137#i34t66q_152">在这个示例中，async启动了一个新协程，并返回一个Deferred对象。</p></section><section><h3 id="-1897185137#runblocking" data-toc="runblocking#starter.md-runblocking">runBlocking:</h3><p id="-1897185137#i34t66q_153">runBlocking用于启动一个新的协程，并且会阻塞线程直到协程执行完成，通常用来在非协程环境中使用协程.</p><p id="-1897185137#i34t66q_154">它的用法可以参见 <span class="inline-code" id="-1897185137#i34t66q_155">async</span> 的代码块。</p></section></section><section><h2 id="-1897185137#i34t66q_156" data-toc="i34t66q_156#starter.md-i34t66q_156">协程上下文和调度器</h2><p id="-1897185137#i34t66q_157">协程上下文是协程执行时的环境，包含协程的调度器、工作模式和其它上下文元素。Dispatchers是Kotlin提供的调度器，用于指定协程在哪个线程池执行。</p><p id="-1897185137#i34t66q_158">通过在<span class="inline-code" id="-1897185137#i34t66q_159">GlobalScope.launch()</span>方法中传入Dispatchers参数来选择调度器，可选的调度器有：</p><ul class="list" id="-1897185137#i34t66q_160" start="1"><li class="list-item" id="-1897185137#i34t66q_161"><p>Dispatchers.Default</p></li></ul><p id="-1897185137#i34t66q_162">Dispatchers.Default用于CPU密集型任务，默认情况下会使用共享的后台线程池。</p><ul class="list" id="-1897185137#i34t66q_163" start="1"><li class="list-item" id="-1897185137#i34t66q_164"><p>Dispatchers.IO</p></li></ul><p id="-1897185137#i34t66q_165">Dispatchers.IO用于IO密集型任务，如文件读写和网络请求，它会使用一个共享的线程池，线程数比Dispatchers.Default更多。</p><ul class="list" id="-1897185137#i34t66q_166" start="1"><li class="list-item" id="-1897185137#i34t66q_167"><p>Dispatchers.Main</p></li></ul><p id="-1897185137#i34t66q_168">Dispatchers.Main用于在主线程上执行UI相关的任务，通常在Android开发中使用。</p><ul class="list" id="-1897185137#i34t66q_169" start="1"><li class="list-item" id="-1897185137#i34t66q_170"><p>Dispatchers.Unconfined</p></li></ul><p id="-1897185137#i34t66q_171">Dispatchers.Unconfined不限制协程的执行线程，协程会在当前线程执行，直到遇到第一个挂起点。之后，协程恢复执行时的线程将由具体的挂起函数决定。例如：</p></section><section><h2 id="-1897185137#i34t66q_172" data-toc="i34t66q_172#starter.md-i34t66q_172">协程的使用场景</h2><p id="-1897185137#i34t66q_173">协程在并发编程、异步任务和长时间运行的任务中作用巨大，假设我们现在有一个并发网络请求:</p><section><h3 id="-1897185137#i34t66q_174" data-toc="i34t66q_174#starter.md-i34t66q_174">并发编程</h3><div class="detached code-block" id="-1897185137#i34t66q_175"><pre><code class="language-kotlin">suspend fun fetchServerData(serverUrl: String): String {
+    delay(1000) // 模拟网络延迟
+    return &quot;Data from $serverUrl&quot;
+}
+
+fun main() = runBlocking {
+    val urls = listOf(&quot;server1.com&quot;, &quot;server2.com&quot;, &quot;server3.com&quot;)
+    val deferreds = urls.map { url -&gt;
+        async { fetchServerData(url) }
+    }
+    val results = deferreds.awaitAll()
+    println(results)
+}</code></pre></div><p id="-1897185137#i34t66q_176">在这个示例中，我们使用async并发地发送请求，并通过awaitAll汇总结果。这样可以显著减少请求时间，提高效率。</p></section><section><h3 id="-1897185137#i34t66q_177" data-toc="i34t66q_177#starter.md-i34t66q_177">异步任务</h3><p id="-1897185137#i34t66q_178">在许多应用中，IO等任务通常需要异步执行，使用协程可以有效优化异步执行的效率，同时避免臭名昭著的回调地狱。还是来看代码：</p><div class="detached code-block" id="-1897185137#i34t66q_179"><pre><code class="language-kotlin">suspend fun readFileAsync(filePath: String): String {
+    return withContext(Dispatchers.IO) {
+        File(filePath).readText()
+    }
+}
+
+fun main() = runBlocking {
+    val filePath = &quot;file.txt&quot;
+    val fileContent = readFileAsync(filePath)
+    println(fileContent)
+}</code></pre></div><p id="-1897185137#i34t66q_180">在这个示例中，我们使用withContext切换到IO调度器进行文件读取操作，从而避免阻塞主线程。</p></section><section><h3 id="-1897185137#i34t66q_181" data-toc="i34t66q_181#starter.md-i34t66q_181">长时间任务</h3><p id="-1897185137#i34t66q_182">同样，如果现在有一个耗时很长的任务，比如IO和计算密集型任务，通过协程避免阻塞主线程也是一个很好的解决方案。</p><div class="detached code-block" id="-1897185137#i34t66q_183"><pre><code class="language-kotlin">suspend fun processData(): String {
+    delay(3000)
+    return &quot;Processing complete&quot;
+}
+
+fun main() = runBlocking {
+    val job = GlobalScope.launch {
+        val result = processData()
+        println(result)
+    }
+    println(&quot;Processing started&quot;)
+    job.join()
+    println(&quot;Processing ended&quot;)
+}</code></pre></div><p id="-1897185137#i34t66q_184">在这个示例中，我们使用launch启动了一个后台任务，并在任务完成后打印结果。通过<span class="inline-code" id="-1897185137#i34t66q_185">job.join()</span>等待任务完成，这样可以确保任务在后台顺利运行，不阻塞主线程。</p></section></section><section><h2 id="-1897185137#i34t66q_186" data-toc="i34t66q_186#starter.md-i34t66q_186">协程的控制结构</h2><section><h3 id="-1897185137#i34t66q_187" data-toc="i34t66q_187#starter.md-i34t66q_187">协程作用域</h3><p id="-1897185137#i34t66q_188">协程作用域(CoroutineScope)定义了协程的生命周期和上下文，它是管理协程的基础，确保协程在作用域内启动并在作用域结束时自动取消。</p><p id="-1897185137#i34t66q_189">常用的作用域有：</p><ul class="list" id="-1897185137#i34t66q_190" start="1"><li class="list-item" id="-1897185137#i34t66q_191"><p>GlobalScope</p></li></ul><p id="-1897185137#i34t66q_192">它的生命周期和应用程序一样长，除非手动调用<span class="inline-code" id="-1897185137#i34t66q_193">cancel</span>方法，否则它启动的携程在应用程序启动期间不会自动取消。</p><ul class="list" id="-1897185137#i34t66q_194" start="1"><li class="list-item" id="-1897185137#i34t66q_195"><p>CoroutineScope</p></li></ul><p id="-1897185137#i34t66q_196">它为协程的生命周期提供了上下文。通过 CoroutineScope 启动的协程会受到作用域的管理，作用域结束时会自动取消所有未完成的协程。CoroutineScope 是结构化并发的基础，它确保协程的生命周期与其作用域绑定，从而提高代码的可靠性和可维护性。</p><div class="detached code-block" id="-1897185137#i34t66q_197"><pre><code class="language-kotlin">class MyCoroutineScope : CoroutineScope {
+    private val job = Job()
+    override val coroutineContext = Dispatchers.Default + job
+
+    fun doWork() {
+        launch {
+            delay(1000)
+            println(&quot;Task from custom CoroutineScope&quot;)
+        }
+    }
+
+    fun cancel() {
+        job.cancel()
+    }
+}
+
+fun main() {
+    val myScope = MyCoroutineScope()
+    myScope.doWork()
+    
+    Thread.sleep(2000) //阻塞主线程来等待
+    myScope.cancel()
+    println(&quot;Main thread ends&quot;)
+}</code></pre></div><p id="-1897185137#i34t66q_198">在这个示例中，我们创建了一个自定义的 CoroutineScope，并在其中启动了一个协程。自定义 CoroutineScope 使用 Job 和 Dispatchers.Default 作为协程上下文，确保协程在 Job 取消时自动结束。</p><div class="detached code-block" id="-1897185137#i34t66q_199"><pre><code class="language-kotlin">suspend fun doWork() = coroutineScope {
+    launch {
+        delay(1000)
+        println(&quot;Task 1 from coroutineScope&quot;)
+    }
+    launch {
+        delay(2000)
+        println(&quot;Task 2 from coroutineScope&quot;)
+    }
+    println(&quot;Tasks started in coroutineScope&quot;)
+}
+
+fun main() = runBlocking {
+    doWork()
+    println(&quot;All tasks completed&quot;)
+}</code></pre></div><p id="-1897185137#i34t66q_200">在这个示例中，coroutineScope 构建器创建了一个局部作用域，确保所有在该作用域内启动的协程在作用域结束前完成。</p></section><section><h3 id="-1897185137#i34t66q_201" data-toc="i34t66q_201#starter.md-i34t66q_201">协程的取消和超时</h3><p id="-1897185137#i34t66q_202">和普通的线程一样，协程也可以取消，当调用<span class="inline-code" id="-1897185137#i34t66q_203">cancel</span>方法时，协程会被取消并抛出<span class="inline-code" id="-1897185137#i34t66q_204">CancellationException</span>， 可以检查<span class="inline-code" id="-1897185137#i34t66q_205">isActive</span>属性来确定协程是否活动。</p><div class="detached code-block" id="-1897185137#i34t66q_206"><pre><code class="language-kotlin">fun main() = runBlocking {
+    val job = launch {
+        repeat(1000) { i -&gt; 
+            println(&quot;working $i ...&quot;)
+            delay(500)
+        }
+    }
+    delay(1300)
+    println(&quot;what can I say?&quot;)
+    job.cancelAndJoin()
+    println(&quot;job out&quot;)
+}</code></pre></div><p id="-1897185137#i34t66q_207">主线程在等待一段时间之后取消了子协程。</p></section><section><h3 id="-1897185137#withtimeout" data-toc="withtimeout#starter.md-withtimeout">协程超时 (withTimeout)</h3><p id="-1897185137#i34t66q_208">withTimeout 函数用于指定协程的最长执行时间，如果协程在指定时间内未完成，则会抛出 TimeoutCancellationException。</p><div class="detached code-block" id="-1897185137#i34t66q_209"><pre><code class="language-kotlin">fun main() = runBlocking {
+    try {
+        withTimeout(1300) {
+            repeat(1000) { i -&gt;
+                println(&quot;working $i ...&quot;)
+                delay(500)
+            }
+        }
+    } catch (e: TimeoutCancellationException) {
+        println(&quot;job out&quot;)
+    }
+}</code></pre></div><p id="-1897185137#i34t66q_210">在这个示例中，withTimeout 限制了协程的执行时间，如果超过1300毫秒，协程将被取消。</p></section></section><section><h2 id="-1897185137#i34t66q_211" data-toc="i34t66q_211#starter.md-i34t66q_211">协程中的异常处理</h2><p id="-1897185137#i34t66q_212">好吧，是程序都会抛出异常。在传统的多线程编程中，通常会在每个 Runnable 内部使用 try-catch 块来处理可能抛出的异常</p><div class="detached code-block" id="-1897185137#i34t66q_213"><pre><code class="language-java">Runnable tryCatchRunnable = () -&gt; { 
+    try {
+        throw new Exception();
+    } catch (Exception e) {
+        System.out.println(&quot;Caught exception: &quot; + e.getMessage());
+    }
+};</code></pre></div><p id="-1897185137#i34t66q_214">在Kotlin协程中，异常处理也是一个重要的方面。</p><section><h3 id="-1897185137#i34t66q_215" data-toc="i34t66q_215#starter.md-i34t66q_215">异常传播:</h3><p id="-1897185137#i34t66q_216">子协程的异常会传播到父协程，所以在coroutineScope中可以捕获它：</p><div class="detached code-block" id="-1897185137#i34t66q_217"><pre><code class="language-kotlin">fun main() = runBlocking {
+    try {
+        coroutineScope {
+            launch {
+                delay(1000)
+                throw Exception(&quot;Error in child coroutine&quot;)
+            }
+        }
+    } catch (e: Exception) {
+        println(&quot;Caught exception: ${e.message}&quot;)
+    }
+}</code></pre></div></section><section><h3 id="-1897185137#i34t66q_218" data-toc="i34t66q_218#starter.md-i34t66q_218">异常处理：</h3><p id="-1897185137#i34t66q_219">最简单有效的方法是直接<span class="inline-code" id="-1897185137#i34t66q_220">try-catch</span> ，在此不再做举例。</p><p id="-1897185137#i34t66q_221">另一种是使用<span class="inline-code" id="-1897185137#i34t66q_222">supervisorScope</span>来进行处理： supervisorScope 是一种特殊的作用域，它确保子协程之间的异常不会相互传播。这意味着一个子协程的失败不会影响其他子协程。</p><div class="detached code-block" id="-1897185137#i34t66q_223"><pre><code class="language-kotlin">fun main() = runBlocking {
+    supervisorScope {
+        val child1 = launch {
+            try {
+                delay(1000)
+                throw Exception(&quot;Error in child1&quot;)
+            } catch (e: Exception) {
+                println(&quot;Caught exception in child1: ${e.message}&quot;)
+            }
+        }
+        val child2 = launch {
+            delay(2000)
+            println(&quot;Child2 completed successfully&quot;)
+        }
+        child1.join()
+        child2.join()
+    }
+    println(&quot;Supervisor scope completed&quot;)
+}</code></pre></div><p id="-1897185137#i34t66q_224">在这个示例中，supervisorScope 确保子协程 child2 不会受到 child1 异常的影响，并且能够正常完成。</p><p id="-1897185137#i34t66q_225">同时，可以使用<span class="inline-code" id="-1897185137#i34t66q_226">CoroutineExceptionHandler</span>来处理和捕获没有在<span class="inline-code" id="-1897185137#i34t66q_227">try-catch</span>中捕获的异常。</p><div class="detached code-block" id="-1897185137#i34t66q_228"><pre><code class="language-kotlin">fun main() = runBlocking {
+    val handler = CoroutineExceptionHandler { _, exception -&gt;
+        println(&quot;Caught exception: ${exception.message}&quot;)
+    }
+    
+    val job = GlobalScope.launch(handler) {
+        throw Exception(&quot;Error in GlobalScope coroutine&quot;)
+    }
+    job.join()
+}</code></pre></div><p id="-1897185137#i34t66q_229">在这个示例中，CoroutineExceptionHandler 用于捕获 GlobalScope 协程中的未捕获异常，并进行处理。</p></section></section><section><h2 id="-1897185137#i34t66q_230" data-toc="i34t66q_230#starter.md-i34t66q_230">协程的高级用法</h2><section><h3 id="-1897185137#i34t66q_231" data-toc="i34t66q_231#starter.md-i34t66q_231">通道和流</h3><p id="-1897185137#i34t66q_232">通道（Channel） 和 流（Flow） 是 Kotlin 协程中用于处理数据流的两种重要概念。</p><ul class="list" id="-1897185137#i34t66q_233" start="1"><li class="list-item" id="-1897185137#i34t66q_234"><p>通道（Channel）：通道是一种基于挂起函数的生产者-消费者模式的实现。它允许在不同协程之间安全地传输数据，并支持缓冲区和无缓冲区的模式。通道提供了 send 和 receive 操作，可以在协程间进行数据传递，支持多个发送者和多个接收者的模式。</p></li></ul><div class="detached code-block" id="-1897185137#i34t66q_235"><pre><code class="language-kotlin">fun main() = runBlocking {
+    val channel = Channel&lt;Int&gt;()
+    
+    launch {
+        for (x in 1..5) channel.send(x * x)
+        channel.close()
+    }
+    
+    repeat(5) {
+        println(channel.receive())
+    }
+    
+    println(&quot;Done!&quot;)
+}</code></pre></div><ul class="list" id="-1897185137#i34t66q_236" start="1"><li class="list-item" id="-1897185137#i34t66q_237"><p>流（Flow）：流是一种冷的数据流，类似于响应式编程中的序列。流的操作符可以进行连续的操作，如 map、filter、transform 等，流的数据传递是惰性的，只有在收集时才会触发。流在处理连续数据流时非常有用，特别是需要处理异步操作的情况。</p></li></ul><div class="detached code-block" id="-1897185137#i34t66q_238"><pre><code class="language-kotlin">import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.*
+
+fun simple(): Flow&lt;Int&gt; = flow {
+    for (i in 1..3) {
+        delay(100) // 模拟异步操作
+        emit(i)
+    }
+}
+fun main() = runBlocking {
+    simple()
+        .map { it * it }
+        .collect { println(it) }
+}</code></pre></div><p id="-1897185137#i34t66q_239">关于Flow，限于篇幅和主题这里只做提及，日后还会有一篇文章专门介绍它(画饼ing...)</p></section><section><h3 id="-1897185137#i34t66q_240" data-toc="i34t66q_240#starter.md-i34t66q_240">协程与回调</h3><p id="-1897185137#i34t66q_241">好吧我不知道为什么还会有人用回调，但是Kotlin协程可以与回调结合使用，通过 suspendCoroutine 和 suspendCancellableCoroutine 等函数将回调风格的异步操作转换为挂起函数。</p><div class="detached code-block" id="-1897185137#i34t66q_242"><pre><code class="language-kotlin">fun fetchData(callback: (Result&lt;String&gt;) -&gt; Unit) {
+    callback(Result.success(&quot;Data fetched successfully&quot;))
+    // callback(Result.failure(Exception(&quot;Failed to fetch data&quot;)))
+}
+
+suspend fun fetchDataAsync(): String = suspendCoroutine { cont -&gt;
+    fetchData { result -&gt;
+        result.fold(
+            onSuccess = { data -&gt; cont.resume(data) },
+            onFailure = { exception -&gt; cont.resumeWithException(exception) }
+        )
+    }
+}
+
+fun main() = runBlocking {
+    val data = fetchDataAsync()
+    println(data)
+}</code></pre></div><p id="-1897185137#i34t66q_243">其实在这里，Kotlin中的协程基本用法已经介绍的差不多了，但是还不够。接下来我们会进一步分析协程，最终实现一个简陋的协程。</p></section></section><section><h2 id="-1897185137#i34t66q_244" data-toc="i34t66q_244#starter.md-i34t66q_244">进一步探究： 如何实现协程?</h2></section></article></div></section></div></body></html>
